@@ -1,0 +1,20 @@
+@import "../../../styles/mixins";
+
+.home {
+  &__title {
+    @include glowing-text;
+
+    font-size: 96px;
+  }
+
+  &__button-container {
+    margin-top: 72px;
+    text-align: center;
+
+    button {
+      width: 80%;
+
+      @include glowing-btn;
+    }
+  }
+}

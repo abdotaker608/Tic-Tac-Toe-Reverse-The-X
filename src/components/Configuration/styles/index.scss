@@ -1,0 +1,30 @@
+@import "../../../styles/mixins";
+
+.configuration {
+  width: 350px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+
+  button {
+    width: 100%;
+
+    &:disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &__btn-primary {
+    @include glowing-btn;
+  }
+
+  &__btn-success {
+    @include glowing-btn(rgb(12, 172, 12));
+  }
+
+  &__btn-error {
+    @include glowing-btn(rgb(165, 18, 18));
+  }
+}

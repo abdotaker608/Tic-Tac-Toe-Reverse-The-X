@@ -1,0 +1,41 @@
+@import "../../../styles/mixins";
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 172px);
+  grid-template-rows: repeat(3, 172px);
+
+  .cell {
+    color: white;
+    font-size: 72px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 150ms ease-out;
+    cursor: pointer;
+
+    @include glowing-box;
+
+    &:hover,
+    &.hint {
+      background-color: rgba(232, 232, 241, 0.5);
+    }
+
+    &.bot {
+      @include glowing-text(orange);
+
+      &.loss {
+        @include glowing-text(rgb(245, 50, 50));
+      }
+    }
+
+    &.player {
+      @include glowing-text(blue);
+
+      &.loss {
+        @include glowing-text(rgb(245, 50, 50));
+      }
+    }
+  }
+}

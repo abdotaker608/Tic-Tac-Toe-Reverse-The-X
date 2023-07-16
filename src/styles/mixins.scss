@@ -1,0 +1,39 @@
+@mixin glowing-text($color: #7f00ff) {
+  color: white;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px $color,
+    0 0 20px $color,
+    0 0 40px $color,
+    0 0 80px $color;
+}
+
+@mixin glowing-box($color: #7f00ff) {
+  box-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px $color,
+    0 0 80px $color;
+}
+
+@mixin glowing-btn($color: #7f00ff) {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 24px;
+  background: linear-gradient(to bottom right, $color, darken($color, 10%));
+  background-size: 200% 200%;
+  background-position: top left;
+  cursor: pointer;
+  transition: 150ms ease-out;
+
+  @include glowing-box($color);
+  @include glowing-text($color);
+
+  &:hover {
+    background-position: bottom right;
+  }
+}
