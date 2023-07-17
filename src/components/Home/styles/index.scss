@@ -1,10 +1,12 @@
 @import "../../../styles/mixins";
 
 .home {
+  padding: 24px;
   &__title {
-    @include glowing-text;
-
+    text-align: center;
     font-size: 96px;
+
+    @include glowing-text;
   }
 
   &__button-container {

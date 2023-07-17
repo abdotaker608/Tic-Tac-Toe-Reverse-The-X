@@ -2,8 +2,8 @@
 
 .board {
   display: grid;
-  grid-template-columns: repeat(3, 172px);
-  grid-template-rows: repeat(3, 172px);
+  grid-template-columns: repeat(3, min(30vw, 172px));
+  grid-template-rows: repeat(3, min(30vw, 172px));
 
   .cell {
     color: white;

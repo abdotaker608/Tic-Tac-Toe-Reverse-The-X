@@ -1,6 +1,17 @@
+@import "../../../styles/mixins.scss";
+
 .game {
   width: 100vw;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 24px;
+  justify-content: center;
   align-items: center;
+  gap: 72px;
+
+  @include media(992) {
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 0;
+  }
 }

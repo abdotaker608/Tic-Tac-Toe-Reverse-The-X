@@ -7,7 +7,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1 className="home__title">Tic Tac Toe - Avoid The X</h1>
+      <h1 className="home__title">Tic Tac Toe - Only X</h1>
       <div className="home__button-container">
         <button onClick={startGame}>START THE GAME!!!</button>
       </div>
