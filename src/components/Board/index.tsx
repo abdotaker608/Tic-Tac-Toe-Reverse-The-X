@@ -7,11 +7,11 @@ const Board = () => {
 
   const handleClick = useCallback(
     (i: number, j: number) => {
-      if (!activeTurn || status !== "inprogress") return;
+      if (!activeTurn || status !== "inprogress" || board[i][j] !== "-") return;
 
       makeMove(i, j);
     },
-    [activeTurn, makeMove, status],
+    [activeTurn, makeMove, status, board],
   );
 
   return (
